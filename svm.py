@@ -70,7 +70,7 @@ def polynomial_kernel(X_train, X_test, y_train, y_test):
 
     # Evaluate model
     from sklearn.metrics import classification_report, confusion_matrix
-    print("========================== POLYNOMIAL KERNEL ==========================")
+    print("POLYNOMIAL KERNEL")
     print(confusion_matrix(y_test, y_pred))
     print(classification_report(y_test, y_pred))
 
@@ -86,7 +86,7 @@ def gaussian_kernel(X_train, X_test, y_train, y_test):
 
     # Evaluate model
     from sklearn.metrics import classification_report, confusion_matrix
-    print("========================== GAUSSIAN KERNEL ==========================")
+    print("GAUSSIAN KERNEL")
     print(confusion_matrix(y_test, y_pred))
     print(classification_report(y_test, y_pred))
 
@@ -99,10 +99,9 @@ def sigmoid_kernel(X_train, X_test, y_train, y_test):
 
     # predictions
     y_pred = svclassifier.predict(X_test)
-
-    # Evaluate model
+    
     from sklearn.metrics import classification_report, confusion_matrix
-    print("========================== SIGMOID KERNEL ==========================")
+    print("SIGMOID KERNEL")
     print(confusion_matrix(y_test, y_pred))
     print(classification_report(y_test, y_pred))
 
@@ -111,6 +110,5 @@ def test():
     polynomial_kernel(X_train, X_test, y_train, y_test)
     gaussian_kernel(X_train, X_test, y_train, y_test)
     sigmoid_kernel(X_train, X_test, y_train, y_test)
-    # linear_svm()
 
 test()
